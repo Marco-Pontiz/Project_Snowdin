@@ -11,11 +11,12 @@ app.set('views', path.join(__dirname, 'views'));
 
 //middleware
 app.use(express.urlencoded({extended: true}));
-app.use(express.static('public  '))
+app.use(express.static('src')); 
+app.use(express.static('public'))
 app.use(express.json());
 
 //router
-app.use('/', require('./backend/routes/index'));
+app.use('/', require('./routes/index'));
 
 const server = app.listen(PORT, () => {
     console.log(`El servidor está en linea! http://localhost:${PORT}`);
