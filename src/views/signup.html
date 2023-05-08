@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Registro</title>
 </head>
 <body>
@@ -16,23 +17,67 @@
     </header>
     <main>
         <form action="" method="POST" class="form">
-            <h2 class="form-title">Inicio de sesión</h2>
+            <h1 class="form-title">Inicio de sesión</h1>
                 <p class="form_paragraph">¿Aún no tienes tu cuenta? <a href="#" class="form_link">Click aquí</a></p>
                 <div class="form-container">
                     <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input class="inputs-r" type="email" id="email" placeholder="Email">
+                        <label for="email" class="form-label">Email:</label>
+                        <input class="inputs-r" type="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label form="password" class="form-label">Contraseña</label>
-                        <input class="inputs-r" type="password" id="password" placeholder="Contraseña">
+                        <label form="password" class="form-label">Contraseña:</label>
+                        <input class="inputs-r" type="password" id="password">
                     </div>   
                 </div> 
             <button type="submit" class="form_submit" vlaue="Entrar">Enviar</button>
         </form>
     </main>
-    <footer>
+    <footer class="footer">
 
+        <div class="container">
+
+            <div class="footer-row">
+
+                <div class="footer-links">
+                    <h4>Compañia</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestros servicios</a></li>
+                        <li><a href="#">Politica de privacidad</a></li>
+                        <li><a href="#">Afiliate</a></li>
+                    </ul>
+                    <div class="footer-links">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Preguntas</a></li>
+                            <li><a href="#">Compras</a></li>
+                            <li><a href="#">Envios</a></li>
+                            <li><a href="#">Estatus de orden</a></li>
+                            <li><a href="#">Pago</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Tienda</h4>
+                        <ul>
+                            <li><a href="#">Ropa</a></li>
+                            <li><a href="#">Botas</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Herramientas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Siguenos</h4>
+                        <div class="social-link">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
