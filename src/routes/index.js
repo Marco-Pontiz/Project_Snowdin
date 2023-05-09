@@ -11,4 +11,8 @@ router.get('/signup', (req, res) => {
     res.render('signup.html')
 })
 
+router.get('/signin', (req, res) => {
+    res.render('signin.html')
+})
+
 module.exports = router;
