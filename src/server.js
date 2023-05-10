@@ -8,7 +8,7 @@ dotenv.config();
 require('./database.js')
 
 //setings
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
 app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 
