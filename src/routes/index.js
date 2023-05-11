@@ -7,12 +7,12 @@ router.get('/', (req, res) => {
     res.render('index.html')
 });
 
-router.get('/signup', (req, res) => {
-    res.render('signup.html')
+router.get('/login', (req, res) => {
+    res.render('login.html')
 })
 
-router.get('/signin', (req, res) => {
-    res.render('signin.html')
+router.get('/register', (req, res) => {
+    res.render('register.html')
 })
 
 module.exports = router;
