@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const Usuario = require('../models/usuario');
+const Usuarios = require('../models/usuario');
 const passport = require('passport');
 
 //rutas
@@ -16,5 +16,16 @@ router.get('/login', (req, res) => {
 router.get('/register', (req, res) => {
     res.render('register.html')
 })
+
+router.post('/register', async(req, res) => {
+    try{
+        const { name, email, telephone, password } = req.body;
+        const usuario = new Usuarios({ name, email, telephone, password });
+        await usuario.save();
+        res.status(201).json({ message: 'Usuario registrado!'});
+    } catch (error) {
+        res.status(400).json({ message: 'Error al registro', error })
+    }
+});
 
 module.exports = router;
