@@ -1,16 +1,10 @@
 const express = require('express');
 const path = require('path');
-const cors = require('cors')
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser')
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(cors())
-app.use(passport.initialize());
-app.use(passport.session())
-app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}));
 dotenv.config();
 require('./database.js');
@@ -33,4 +27,4 @@ app.use('/', require('./routes/index'));
 const server = app.listen(PORT, () => {
     console.log(`El servidor está en linea! http://localhost:${PORT}`);
 })
-server.on("error", error => console.log(`Error al inicializar el servidor ${error}`));
+server.on("error", error => console.log(`Error al inicializar el servidor :( ... ${error}`));
