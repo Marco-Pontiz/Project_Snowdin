@@ -17,11 +17,17 @@ passport.use('local-signup', new LocalStrategy ({
     passwordField: 'password',
     passReqToCallback: true
 }, async (req, email, password, done) => {
-    const usuario = new Usuario();
-    usuario.name = req.body.name,
-    usuario.email = req.body.email,
-    usuario.telephone = req.body.telephone,
-    usuario.password = bcrypt.hashSync(req.body.password, 10),
-    await usuario.save()
-    done(null, usuario);
+    const usuario = new Usuario({
+        name: req.body.name,
+        email: req.body.email,
+        telephone: req.body.telephone,
+        password: bcrypt.hashSync(req.body.password, 10),
+    });
+    
+    try {
+        await usuario.save();
+        done(null, usuario);
+    } catch (error) {
+        done(error);
+    }
 }));
