@@ -10,7 +10,7 @@ function createSendMail(mailConfig) {
 
 function createSendMailGmail() {
     return createSendMail ({
-        host: 'smtp .gmail.com',
+        host: 'smtp.gmail.com',
         port: 587,
         auth:{
             user: process.env.EMAIL,
